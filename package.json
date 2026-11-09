@@ -1,0 +1,47 @@
+{
+  "name": "kglaundry",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^1.1.0",
+    "@ai-sdk/openai": "^1.1.0",
+    "@payloadcms/db-postgres": "^3.0.0",
+    "@payloadcms/db-sqlite": "^3.93.0",
+    "@payloadcms/next": "^3.0.0",
+    "@payloadcms/richtext-lexical": "^3.0.0",
+    "@payloadcms/ui": "^3.0.0",
+    "@supabase/supabase-js": "^2.119.0",
+    "ai": "^4.1.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.0.0",
+    "graphql": "^16.10.0",
+    "lucide-react": "^0.475.0",
+    "next": "15.1.7",
+    "payload": "^3.0.0",
+    "pg": "^8.13.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^3.4.17",
+    "three": "^0.187.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/pg": "^8.11.11",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@types/three": "^0.187.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "typescript": "^5.7.3"
+  }
+}
