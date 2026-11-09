@@ -139,7 +139,7 @@ export default function ItemizedPricingTable() {
             100% Transparent Pricing
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-            Clear, Honest Pricing in Indian Rupees (₹)
+            Clear, Transparent Pricing
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             No surprise add-ons. Verified weight via calibrated digital scale in front of you at pickup, with instant WhatsApp receipts.

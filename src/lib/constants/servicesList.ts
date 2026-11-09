@@ -139,7 +139,7 @@ export const KG_ALL_SERVICES: ServiceDetail[] = [
     turnaround: '48h',
     priceStart: '₹149/pc',
     iconName: 'bedding',
-    description: 'Specialized thermal drum washing and dust-mite allergen extraction. Comforters and heavy quilts are processed strictly per piece with fiber fluff preservation.',
+    description: 'Specialized thermal washing and dust-mite allergen extraction. Comforters and heavy quilts are processed strictly per piece with fiber fluff preservation.',
     pricingItems: [
       { item: 'Single Bed Sheet', price: '₹99 / pc' },
       { item: 'Double / King Size Bed Sheet', price: '₹149 / pc' },

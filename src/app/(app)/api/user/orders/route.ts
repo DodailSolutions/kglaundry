@@ -45,7 +45,7 @@ export async function GET(req: NextRequest) {
             : doc.status === 'Contacted'
             ? 'Slot Confirmed with Customer'
             : doc.status === 'Converted'
-            ? 'In Individual Drum Wash'
+            ? 'In Separate Machine Wash'
             : doc.status,
         stage: doc.status,
         timeSlot: doc.notes || 'Today: 2:00 PM – 5:00 PM',

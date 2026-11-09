@@ -24,10 +24,11 @@ interface ChatMessage {
 
 interface ChatWidgetProps {
   isOpen?: boolean;
+  onOpen?: () => void;
   onClose?: () => void;
 }
 
-export default function ChatWidget({ isOpen: controlledIsOpen, onClose }: ChatWidgetProps) {
+export default function ChatWidget({ isOpen: controlledIsOpen, onOpen, onClose }: ChatWidgetProps) {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const isOpen = controlledIsOpen !== undefined ? controlledIsOpen : internalIsOpen;
 
@@ -59,10 +60,12 @@ export default function ChatWidget({ isOpen: controlledIsOpen, onClose }: ChatWi
   }, [messages, loading]);
 
   const handleToggle = () => {
-    if (onClose && isOpen) {
-      onClose();
+    if (isOpen) {
+      if (onClose) onClose();
+      setInternalIsOpen(false);
     } else {
-      setInternalIsOpen(!internalIsOpen);
+      if (onOpen) onOpen();
+      setInternalIsOpen(true);
     }
   };
 
@@ -129,13 +132,13 @@ export default function ChatWidget({ isOpen: controlledIsOpen, onClose }: ChatWi
 
   return (
     <>
-      {/* Floating Launcher Button (All Devices Friendly) */}
+      {/* Floating Launcher Button (Desktop & Mobile) */}
       {!isOpen && (
         <button
           onClick={handleToggle}
           id="chat-toggle"
-          aria-label="Open AI Laundry Assistant"
-          className="fixed bottom-20 right-3.5 md:bottom-6 md:right-6 z-40 flex items-center gap-2 rounded-full bg-[#6EC5B8] p-3 md:p-4 text-slate-900 shadow-[0_8px_25px_rgba(110,197,184,0.45)] transition-all hover:scale-105 hover:bg-[#5bb3a6] focus:outline-none active:scale-95 border-2 border-white"
+          aria-label="Open KG Laundry AI Assistant"
+          className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2.5 rounded-full bg-[#6EC5B8] px-4 py-3 sm:px-5 sm:py-3.5 text-slate-900 shadow-[0_8px_25px_rgba(110,197,184,0.45)] transition-all hover:scale-105 hover:bg-[#5bb3a6] focus:outline-none active:scale-95 border-2 border-white"
         >
           <div className="relative">
             <MessageSquare className="h-5 w-5 md:h-6 md:w-6 stroke-[2.5]" />
@@ -144,7 +147,7 @@ export default function ChatWidget({ isOpen: controlledIsOpen, onClose }: ChatWi
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-900"></span>
             </span>
           </div>
-          <span className="font-black text-xs hidden sm:inline text-slate-900 tracking-tight">Ask KG AI</span>
+          <span className="font-bold text-xs sm:text-sm text-slate-900 tracking-tight">Ask KG Concierge</span>
         </button>
       )}
 

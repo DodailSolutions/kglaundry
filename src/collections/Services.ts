@@ -57,7 +57,7 @@ export const Services: CollectionConfig = {
           type: 'number',
           required: true,
           admin: {
-            description: 'Price in Indian Rupees (₹)',
+            description: 'Price (₹)',
             width: '50%',
           },
         },

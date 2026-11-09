@@ -21,7 +21,7 @@ const PROMO_ANNOUNCEMENTS = [
   },
   {
     icon: ShieldCheck,
-    text: '100% Individual Washing Drums • Never mixed with other clothes',
+    text: '100% Separate Machine Wash • Never mixed with other clothes',
     highlight: 'HYGIENIC',
   },
   {

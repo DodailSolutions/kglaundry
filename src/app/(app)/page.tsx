@@ -72,8 +72,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50/80 px-4 py-1.5 text-xs font-semibold text-emerald-800">
-                <Truck className="h-4 w-4 text-emerald-600" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#6EC5B8]/40 bg-[#6EC5B8]/10 px-4 py-1.5 text-xs font-bold text-[#2C3032]">
+                <Truck className="h-4 w-4 text-[#6EC5B8]" />
                 On-Time & Safe Doorstep Delivery across Hyderabad
               </div>
 
@@ -157,7 +157,7 @@ export default function HomePage() {
                   <div className="text-xs text-slate-500">Wash Bags Delivered</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-extrabold text-emerald-600">On-Time</div>
+                  <div className="text-2xl font-extrabold text-[#6EC5B8]">On-Time</div>
                   <div className="text-xs text-slate-500">Scheduled Delivery</div>
                 </div>
                 <div>
@@ -205,12 +205,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* 13 Dedicated Service Cards Grid with Unique Custom SVG Icons */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {/* Dedicated Service Cards: Horizontal Carousel on Mobile, Grid on Tablet/Desktop */}
+          <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none gap-4 sm:gap-6 pb-4 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {KG_ALL_SERVICES.map((service) => (
               <div
                 key={service.id}
-                className="group relative flex flex-col justify-between rounded-3xl bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl border border-white/60"
+                className="group relative flex flex-col justify-between rounded-3xl bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl border border-white/60 w-[84vw] max-w-[310px] shrink-0 snap-center sm:w-auto sm:max-w-none"
               >
                 <div>
                   {/* Top Bar with Icon & Turnaround */}
@@ -281,7 +281,7 @@ export default function HomePage() {
               <span className="text-[#6EC5B8]">★</span>
               <span className="flex items-center gap-3">
                 <Sparkles className="h-4 w-4 text-[#6EC5B8]" />
-                100% INDIVIDUAL DRUM WASH
+                100% SEPARATE MACHINE WASH
               </span>
               <span className="text-[#6EC5B8]">★</span>
               <span className="flex items-center gap-3">
@@ -318,7 +318,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Never Mixed With Other Clothes</h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                100% private & hygienic wash. Your clothes are washed separately in an individual machine drum—never mixed with anyone else’s clothes.
+                100% private & hygienic wash. Your clothes are washed separately in a dedicated machine—never mixed with anyone else’s clothes.
               </p>
             </div>
 
@@ -375,69 +375,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Our Mission & Promise Section (Styled matching Discover Our Services prominence) */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_center,rgba(110,197,184,0.18),transparent_65%)]" />
-        
+      {/* Our Mission & Promise Section (Fresh, Clean Light Aesthetic with Uniform Numbering) */}
+      <section className="py-24 bg-gradient-to-b from-white via-slate-50 to-emerald-50/30 border-y border-slate-200/80 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Centered Header matching Discover Our Services exact scale & hierarchy */}
+          {/* Centered Header matching Discover Our Services prominence */}
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-black/80 border border-emerald-400/40 px-4 py-1 text-[11px] font-black tracking-wider text-emerald-300 shadow-sm mb-1 uppercase">
-              <HeartHandshake className="h-3.5 w-3.5 text-[#6EC5B8]" />
-              <span>Hygienic, Reliable & Transparent Care</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight">
               Our Mission & Promise
             </h2>
-            <p className="text-base sm:text-xl font-black text-emerald-400 tracking-wide uppercase">
+            <p className="text-base sm:text-xl font-black text-[#0d9488] tracking-wide uppercase">
               We Are Striving Every Day To Give You Your Weekends Back
             </p>
-            <p className="text-slate-300 font-medium text-sm sm:text-base max-w-2xl mx-auto pt-2 leading-relaxed">
+            <p className="text-slate-600 font-medium text-sm sm:text-base max-w-2xl mx-auto pt-2 leading-relaxed">
               At KG Laundry, our goal goes far beyond clean clothes. We engineered an effortless, modern laundry routine to give Hyderabad’s families and professionals peace of mind and precious time to live.
             </p>
           </div>
 
-          {/* 4 Cards with refreshed, vibrant numbered color badges */}
+          {/* 4 Cards with UNIFORM, elegant numbers */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl border border-emerald-500/25 bg-emerald-950/20 p-6 backdrop-blur-sm transition-all hover:border-emerald-500/50 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center rounded-xl bg-[#6EC5B8]/20 border border-[#6EC5B8]/40 px-3 py-1 text-sm font-black text-[#6EC5B8] mb-3">
-                01
+            {[
+              {
+                num: '01',
+                title: 'Eliminate Laundry Stress',
+                desc: 'No more sorting piles, waiting on washing machines, balcony drying, or spending Sunday afternoons standing with an iron.',
+              },
+              {
+                num: '02',
+                title: 'Uncompromising Hygiene',
+                desc: 'Dedicated separate machines for every customer, ozone water sanitization, and protective sealed delivery packaging.',
+              },
+              {
+                num: '03',
+                title: 'Honest & Fair Pricing',
+                desc: 'Clear per-kg and per-piece rates. You only pay for what your clothes weigh—with zero hidden delivery charges.',
+              },
+              {
+                num: '04',
+                title: 'Expanding Doorstep Reach',
+                desc: 'Connecting Gachibowli, Hitech City, Madhapur, Kondapur, Jubilee Hills, and Banjara Hills with seamless doorstep pickup.',
+              },
+            ].map((card, idx) => (
+              <div
+                key={idx}
+                className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1"
+              >
+                <div className="inline-flex items-center justify-center rounded-xl bg-slate-100 border border-slate-200 px-3 py-1 text-sm font-black text-slate-800 mb-4">
+                  {card.num}
+                </div>
+                <h4 className="text-lg font-bold text-slate-900 mb-2">{card.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{card.desc}</p>
               </div>
-              <h4 className="text-base font-bold text-white mb-2">Eliminate Laundry Stress</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                No more sorting piles, waiting on washing machines, balcony drying, or spending Sunday afternoons standing with an iron.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-sky-500/25 bg-sky-950/20 p-6 backdrop-blur-sm transition-all hover:border-sky-500/50 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center rounded-xl bg-sky-500/20 border border-sky-500/40 px-3 py-1 text-sm font-black text-sky-400 mb-3">
-                02
-              </div>
-              <h4 className="text-base font-bold text-white mb-2">Uncompromising Hygiene</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Individual machine drums for every customer, ozone water sanitization, and protective sealed delivery packaging.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-amber-500/25 bg-amber-950/20 p-6 backdrop-blur-sm transition-all hover:border-amber-500/50 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center rounded-xl bg-amber-500/20 border border-amber-500/40 px-3 py-1 text-sm font-black text-amber-400 mb-3">
-                03
-              </div>
-              <h4 className="text-base font-bold text-white mb-2">Honest & Fair Pricing</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Clear per-kg and per-piece rates in Rupees. You only pay for what your clothes weigh—with zero hidden delivery charges.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-purple-500/25 bg-purple-950/20 p-6 backdrop-blur-sm transition-all hover:border-purple-500/50 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center rounded-xl bg-purple-500/20 border border-purple-500/40 px-3 py-1 text-sm font-black text-purple-300 mb-3">
-                04
-              </div>
-              <h4 className="text-base font-bold text-white mb-2">Expanding Doorstep Reach</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Connecting Gachibowli, Hitech City, Madhapur, Kondapur, Jubilee Hills, and Banjara Hills with seamless doorstep pickup.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -465,7 +453,7 @@ export default function HomePage() {
             {/* Step 1 */}
             <div className="group relative rounded-3xl border border-slate-200/90 bg-slate-50/70 p-7 text-left hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-between mb-5">
-                <div className="h-12 w-12 rounded-2xl bg-[#6EC5B8] text-slate-900 flex items-center justify-center font-black text-lg shadow-sm">
+                <div className="h-12 w-12 rounded-2xl bg-[#2C3032] text-white flex items-center justify-center font-black text-lg shadow-sm">
                   01
                 </div>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Step 1</span>
@@ -481,7 +469,7 @@ export default function HomePage() {
             {/* Step 2 */}
             <div className="group relative rounded-3xl border border-slate-200/90 bg-slate-50/70 p-7 text-left hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-between mb-5">
-                <div className="h-12 w-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black text-lg shadow-sm">
+                <div className="h-12 w-12 rounded-2xl bg-[#2C3032] text-white flex items-center justify-center font-black text-lg shadow-sm">
                   02
                 </div>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Step 2</span>
@@ -497,7 +485,7 @@ export default function HomePage() {
             {/* Step 3 */}
             <div className="group relative rounded-3xl border border-slate-200/90 bg-slate-50/70 p-7 text-left hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-between mb-5">
-                <div className="h-12 w-12 rounded-2xl bg-[#6EC5B8] text-slate-900 flex items-center justify-center font-black text-lg shadow-sm">
+                <div className="h-12 w-12 rounded-2xl bg-[#2C3032] text-white flex items-center justify-center font-black text-lg shadow-sm">
                   03
                 </div>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Step 3</span>
@@ -506,17 +494,17 @@ export default function HomePage() {
                 Private Sanitized Wash
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Washed in an individual drum (never mixed with other orders), treated with eco-softeners, and finished with vacuum steam ironing.
+                Washed separately in a dedicated machine (never mixed with other orders), treated with eco-softeners, and finished with vacuum steam ironing.
               </p>
             </div>
 
             {/* Step 4 */}
             <div className="group relative rounded-3xl border border-slate-200/90 bg-slate-50/70 p-7 text-left hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center justify-between mb-5">
-                <div className="h-12 w-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-lg shadow-sm">
+                <div className="h-12 w-12 rounded-2xl bg-[#2C3032] text-white flex items-center justify-center font-black text-lg shadow-sm">
                   04
                 </div>
-                <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">Step 4</span>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Step 4</span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
                 Delivered Fresh & Crisp
@@ -647,7 +635,7 @@ export default function HomePage() {
                   disabled={submitting}
                   className="w-full rounded-xl bg-[#6EC5B8] py-4 text-center text-sm font-bold text-white shadow-md hover:bg-[#5bb3a6] transition disabled:opacity-50"
                 >
-                  {submitting ? 'Placing Order...' : 'Place Your Order (Zero Upfront Payment)'}
+                  {submitting ? 'Placing Order...' : 'Place Your Order'}
                 </button>
               </form>
             )}
@@ -655,8 +643,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-slate-50 border-t border-slate-200">
+      {/* FAQ Section with mobile bottom nav safe padding */}
+      <section id="faq" className="py-20 pb-40 sm:pb-24 bg-slate-50 border-t border-slate-200">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-3 mb-12">
             <h3 className="text-3xl font-extrabold text-slate-900">
@@ -675,7 +663,7 @@ export default function HomePage() {
               },
               {
                 q: 'Are my clothes washed with other customers’ clothes?',
-                a: 'Never. At KG Laundry, strict hygiene is our core promise. Every order is assigned an individual machine drum and never mixed with any other customer’s garments.',
+                a: 'Never. At KG Laundry, strict hygiene is our core promise. Every order is washed separately in a dedicated machine and never mixed with any other customer’s garments.',
               },
               {
                 q: 'What is your turnaround time?',

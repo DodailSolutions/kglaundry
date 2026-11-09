@@ -67,7 +67,7 @@ export default function BasicPricingSection() {
             100% Transparent Rates
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-            Clear, Honest Pricing in Indian Rupees (₹)
+            Clear, Transparent Pricing
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             Doorstep digital scale weighing in front of you. Zero hidden fees or unexpected surge charges.

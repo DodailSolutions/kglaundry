@@ -316,7 +316,7 @@ export default function BottomNav({ onOpenChat }: BottomNavProps) {
                   type="submit"
                   className="w-full rounded-xl bg-[#6EC5B8] py-3.5 text-center text-xs font-black text-slate-900 shadow-md hover:bg-[#5bb3a6] transition"
                 >
-                  Place Your Order (Zero Upfront Pay)
+                  Place Your Order
                 </button>
               </form>
             )}
@@ -516,7 +516,7 @@ export default function BottomNav({ onOpenChat }: BottomNavProps) {
                           <span className="text-emerald-700 font-semibold flex items-center gap-1">
                             <Sparkles className="h-3 w-3" /> Digital Scales at Doorstep
                           </span>
-                          <span className="font-bold text-slate-800">Private Drum Wash</span>
+                          <span className="font-bold text-slate-800">Private Separate Wash</span>
                         </div>
                       </div>
                     ))}

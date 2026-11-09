@@ -16,7 +16,11 @@ export default function AppWrapper({ children }: { children: React.ReactNode }) 
       <main className="flex-1">{children}</main>
       <Footer />
       <BottomNav onOpenChat={() => setChatOpen(true)} />
-      <ChatWidget isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+      <ChatWidget
+        isOpen={chatOpen}
+        onOpen={() => setChatOpen(true)}
+        onClose={() => setChatOpen(false)}
+      />
       <MobileAppBanner />
     </div>
   );

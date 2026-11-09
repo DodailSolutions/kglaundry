@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: 'Transparent Pricing & Rates | KG Laundry Hyderabad',
   description:
-    '100% honest laundry & dry cleaning pricing in Indian Rupees (₹). Wash by KG at ₹79/kg, dry cleaning from ₹149/pc. Doorstep digital scale weighing with zero hidden fees.',
+    '100% honest laundry & dry cleaning pricing. Wash by KG at ₹79/kg, dry cleaning from ₹149/pc. Doorstep digital scale weighing with zero hidden fees.',
 };
 
 export default function PricingPage() {

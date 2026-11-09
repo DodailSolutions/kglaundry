@@ -84,7 +84,7 @@ export const Pages: CollectionConfig = {
           labels: { singular: 'Pricing Calculator / Table', plural: 'Pricing Tables' },
           fields: [
             { name: 'heading', type: 'text', defaultValue: 'Honest & Transparent Rates' },
-            { name: 'subheading', type: 'text', defaultValue: 'No hidden fees. Every service priced clearly in Indian Rupees (₹).' },
+            { name: 'subheading', type: 'text', defaultValue: 'No hidden fees. Every service priced clearly and transparently.' },
           ],
         },
         {
